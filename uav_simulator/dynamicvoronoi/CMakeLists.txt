@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf2
   tf2_ros
   tf2_geometry_msgs
+  costmap_2d
 )
 
 ## 声明 catkin 包
@@ -55,7 +56,7 @@ target_link_libraries( dynavoro
     ${catkin_LIBRARIES} 
     ${PCL_LIBRARIES}
     ${CGAL_LIBRARIES}
-    ${OPNECV_LIBSRARIES}
+    ${OpenCV_LIBRARIES}
     )  
 
 

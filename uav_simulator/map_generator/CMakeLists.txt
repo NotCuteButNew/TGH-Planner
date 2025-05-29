@@ -12,14 +12,24 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   pcl_conversions
   common_srvs
+  message_runtime
 )
 find_package(PCL REQUIRED)
 find_package(Eigen3 REQUIRED)
 
-catkin_package()
+catkin_package(
+  CATKIN_DEPENDS
+  roscpp
+  rospy
+  std_msgs
+  geometry_msgs
+  pcl_conversions
+  common_srvs
+  message_runtime
+)
 
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIR}
   ${PCL_INCLUDE_DIRS}
